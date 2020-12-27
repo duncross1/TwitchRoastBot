@@ -1,9 +1,11 @@
 
+//return a random roast
 function getRoast()
 {
 	return roasts[Math.floor(Math.random() * roasts.length)];
 }
 
+//An array containing all roasts
 var roasts = [
 'you\'re lame',
 'twitch banned all the words I would use to describe you',

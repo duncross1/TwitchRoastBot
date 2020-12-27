@@ -3,10 +3,7 @@ const tmi = require('tmi.js');
 const config = require('./config.js');
 const roasts = require('./roasts.js');
 
-roasts.getRoast();
-
-
-
+//Create new client object
 const client = new tmi.Client({
 	options: { debug: true, messagesLogLevel: "info" },
 	connection: {reconnect: true,secure: true},
@@ -21,9 +18,10 @@ const client = new tmi.Client({
 //connect to twitch
 client.connect().catch(console.error);
 
+//When a message is sent to any of the connected channels chats
 client.on('message', (channel, tags, message, self) => {
-	if(self || !message.startsWith('!')) return; //if message is from the bot or message is not a command, ignore.
-	console.log(tags + channel);
+	//if message is from the bot or message is not a command, ignore.
+	if(self || !message.startsWith('!')) return; 
 
 	//Roast the user sending the command
 	if(message.toLowerCase() === '!roastme') {

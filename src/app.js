@@ -1,6 +1,6 @@
 
+require('dotenv').config()
 const tmi = require('tmi.js');
-const config = require('./config.js');
 const roasts = require('./roasts.js');
 
 //Create new client object
@@ -9,8 +9,8 @@ const client = new tmi.Client({
 	connection: {reconnect: true,secure: true},
 	identity: 
 	{
-		username: config.botLogin.USERNAME,
-		password: config.botLogin.TOKEN
+		username: process.env.TWITCH_USERNAME,
+		password: process.env.TWITCH_TOKEN
 	},
 	channels: [ 'channel']
 });

@@ -21,7 +21,11 @@ var roasts = [
 'If I was the streamer I\'d ban you',
 'You remind me of Brad Pitt, except without the good looks, talent, or personality',
 'Do us all a favour and click the \'X\' at the top of your browser',
-'You are the human equivelant of a wet sleeve'
+'You are the human equivelant of a wet sleeve',
+'I was wondering how you comb your hair so the horns don’t show',
+'The fall from your ego to your IQ would be fatal',
+'your head stepped in something, oh wait thats your face',
+'I can\'t roast you, never kick someone when they are down'
 ]
 
 module.exports.getRoast = getRoast;

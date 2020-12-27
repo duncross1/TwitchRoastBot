@@ -12,7 +12,7 @@ const client = new tmi.Client({
 		username: config.botLogin.USERNAME,
 		password: config.botLogin.TOKEN
 	},
-	channels: [ 'thescotsway']
+	channels: [ 'channel']
 });
 
 //connect to twitch
